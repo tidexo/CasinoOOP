@@ -1,16 +1,16 @@
 package animal.domain;
 public class BlackJack extends Mesa {
-    private boolean puedeVolar;
+    private int apuestaMinima;
     public BlackJack(String nombre, float peso, int edad, String especie, boolean puedeVolar){
         super(nombre, peso, edad,especie);
         
-        this.puedeVolar = puedeVolar;
+        this.apuestaMinima = apuestaMinima;
     }
-    public boolean getPuedeVolar(){
-        return puedeVolar;
+    public boolean apuestaMinima(){
+        return apuestaMinima;
     }
     public String toString(){
-        return "BlackJack, puede volar: " + puedeVolar + " " + super.toString();
+        return "BlackJack, apuesta mínima: " + apuestaMinima + " " + super.toString();
     }
     public String tipo(){
         return subtypes[1];
