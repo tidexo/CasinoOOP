@@ -5,10 +5,10 @@ import java.util.Scanner;
 import empleado.domain.Empleado;
 import empleado.domain.Croupier;
 
-public class VCreateFijo {
+public class VCreateCroupier {
     private Scanner sc ;
     private List<Empleado> dataList;
-    public VCreateFijo(Scanner sc, List<Empleado> l){
+    public VCreateCroupier(Scanner sc, List<Empleado> l){
         this.sc=sc;
         dataList = l;
     }
