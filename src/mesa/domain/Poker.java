@@ -1,7 +1,7 @@
 package animal.domain;
 public class Poker extends Mesa {
-    private boolean tienePelo;
-    public Poker(String nombre, float peso, int edad, String especie, boolean tienePelo){
+    private string modalidad;
+    public Poker(,string modalidad){
         super(nombre,peso,edad,especie);
         this.tienePelo = tienePelo;
     }
