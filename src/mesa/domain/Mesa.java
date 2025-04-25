@@ -15,7 +15,7 @@ public class Mesa implements Serializable {
         this.subtypes= new String[]{"BlackJack", "Poker"};
     }
     public int getmaxJugadores(){
-        return nombre;
+        return maxjugadores;
     }
     public int getminJugadores(){
         return minJugadores;
