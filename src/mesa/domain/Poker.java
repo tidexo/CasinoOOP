@@ -1,4 +1,4 @@
-package animal.domain;
+package mesa.domain;
 public class Poker extends Mesa {
     private string modalidad;
     public Poker(int minJugadores, int maxJugadores, boolean estadoMesa,string modalidad){
