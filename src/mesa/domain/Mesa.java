@@ -5,29 +5,25 @@ import java.io.Serializable;
 
 public class Mesa implements Serializable {
     protected String[] subtypes;
-    private String nombre;
-    private float peso;
-    private int edad;
-    private String especie;
-    public Mesa(String nombre, float peso, int edad, String especie) {
-        this.nombre = nombre;
-        this.peso = peso;
-        this.edad = edad;
-        this.especie = especie;
-        this.subtypes= new String[]{"Mamífero", "BlackJack", "Genérico"};
+    private int maxJugadores;
+    private int minJugadores;
+    private boolean estadoMesa;
+    public Mesa(int maxJugadores, int minJugadores, boolean estadoMesa) {
+        this.maxJugadores = maxJugadores;
+        this.minJugadores = minJugadores;
+        this.estadomesa = estadoMesa;
+        this.subtypes= new String[]{"BlackJack", "Poker"};
     }
-    public String getNombre(){
+    public String getmaxJugadores(){
         return nombre;
     }
-    public float getPeso(){
+    public float getminJugadores(){
         return peso;
     }
-    public int getEdad(){
+    public int getestadoMesa(){
         return edad;
     }
-    public String getEspecie(){
-        return especie;
-    }
+    
     public String toString(){
         return "Peso: " + peso + " Edad: " + edad + " Especie: " + especie;
     }
