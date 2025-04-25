@@ -1,4 +1,4 @@
-package animal.domain;
+package mesa.domain;
 
 import java.io.Serializable;
 
