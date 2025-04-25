@@ -11,33 +11,33 @@ public class VCreate {
     private List<Mesa> mesa;
     public VCreate(Scanner sc, List<Mesa> la){
         this.sc=sc;
-        mesa = la;
+        this.mesa = mesas;
     }
     public void create(){
-        System.out.println("INTRODUCE NOMBRE: ");
-        String nombre = sc.next();
-        System.out.println("INTRODUCE EL PESO");
-        float peso = sc.nextFloat();
-        System.out.println("INTRODUCE EDAD");
-        int edad = sc.nextInt();
-        System.out.println("INTRODUCE ESPECIE");
-        String especie = sc.next();
+        System.out.println("INTRODUCE MÍNIMO DE JUGADORES: ");
+        String minJugadores = sc.next();
+        System.out.println("INTRODUCE MAXIMO DE JUGADORES");
+        int maxJugadores = sc.nextInt();
+        System.out.println("¿LA MESA ESTÁ ACTIVA? (1 para Sí / 0 para No):");
+        boolean estadoMesa =  (sc.nextInt() == 1);
 
         System.out.println("INTRODUCE POKER (1) O BLACKJACK (2) O GENERICO(OTRA TECLA)");
         int tipo = sc.nextInt();  
-        Mesa animal ;
+        Mesa mesa ;
 
-        if(tipo == 1){
-            System.out.println(" ¿ Pelo no (0) / si (1)?");
-            boolean tienePelo = (sc.nextInt()!=0)?true : false;
-            animal = new Poker(nombre, peso, edad, especie, tienePelo );
+        if (tipo == 1) {
+            System.out.println("¿TIENE CRUPIER PROFESIONAL? (1 para Sí / 0 para No): ");
+            boolean tieneCrupier = (sc.nextInt() == 1);
+            mesa = new Poker(nombre, minJugadores, maxJugadores, estado, tieneCrupier);
         } else if (tipo == 2) {
-            System.out.println(" ¿ vuela no (0) / si (1)?");
-            boolean puedeVolar = (sc.nextInt()!=0)?true : false;
-            animal = new BlackJack(nombre, peso, edad, especie, puedeVolar);
-        } else{
-            animal = new Mesa(nombre, peso, edad, especie);
+            System.out.println("¿PERMITE APUESTAS LATERALES? (1 para Sí / 0 para No): ");
+            boolean apuestasLaterales = (sc.nextInt() == 1);
+            mesa = new BlackJack(nombre, minJugadores, maxJugadores, estado, apuestasLaterales);
+        } else {
+            mesa = new Mesa(nombre, minJugadores, maxJugadores, estado);
         }
-        animal.add(animal);
+
+        mesas.add(mesa);
+        System.out.println("Mesa creada correctamente.");
     }
 }
