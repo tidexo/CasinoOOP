@@ -12,16 +12,16 @@ public class VCreate {
         dataList = l;
     }
     public void create(){
-        System.out.println("Tipo de empleado: Croupier (1), Limpiador (2), Temporal (otra tecla)");
+        System.out.println("Tipo de empleado: Croupier (1), Limpiador (2), Seguridad (otra tecla)");
         int tipo = sc.nextInt();  
         if(tipo == 1){
-            VCreateFijo vc=new VCreateFijo(sc, dataList);
+            VCreateCroupier vc=new VCreateCroupier(sc, dataList);
             vc.create();
         }else if(tipo == 2) {
         	VCreateParcial vc=new VCreateParcial(sc, dataList);
         	vc.create();
         }else{
-        	VCreateTemporal vc=new VCreateTemporal(sc, dataList);
+        	VCreateSeguridad vc=new VCreateSeguridad(sc, dataList);
         	vc.create();
         } 
     }
