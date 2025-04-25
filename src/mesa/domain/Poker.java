@@ -1,11 +1,11 @@
 package animal.domain;
 public class Poker extends Mesa {
     private string modalidad;
-    public Poker(,string modalidad){
-        super(nombre,peso,edad,especie);
-        this.tienePelo = tienePelo;
+    public Poker(int minJugadores, int maxJugadores, boolean estadoMesa,string modalidad){
+        super(minJugadores, maxJugadores, estadoMesa);
+        this.modalidad = modalidad;
     }
-    public boolean getTienePelo(){
+    public boolean getmodalidad(){
         return tienePelo;
     }   
     public String toString(){
