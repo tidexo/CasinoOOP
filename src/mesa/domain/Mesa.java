@@ -25,7 +25,7 @@ public class Mesa implements Serializable {
     }
     
     public String toString(){
-        return "Peso: " + peso + " Edad: " + edad + " Especie: " + especie;
+        return "mínimo de jugadores: " + minJugadores + " máximo de jugadores: " + maxJugadores + " estado de la mesa: " + estadoMesa;
     }
     public boolean equals(Object obj) {
         String nombreTmp=((Mesa)obj).getNombre();
