@@ -14,25 +14,20 @@ public class Mesa implements Serializable {
         this.estadomesa = estadoMesa;
         this.subtypes= new String[]{"BlackJack", "Poker"};
     }
-    public String getmaxJugadores(){
+    public int getmaxJugadores(){
         return nombre;
     }
-    public float getminJugadores(){
-        return peso;
+    public int getminJugadores(){
+        return minJugadores;
     }
-    public int getestadoMesa(){
-        return edad;
+    public boolean getestadoMesa(){
+        return estadoMesa;
     }
     
     public String toString(){
         return "mínimo de jugadores: " + minJugadores + " máximo de jugadores: " + maxJugadores + " estado de la mesa: " + estadoMesa;
     }
-    public boolean equals(Object obj) {
-        String nombreTmp=((Mesa)obj).getNombre();
-        if (this.nombre.equals(nombreTmp))
-            return true;
-        return false;
-    }
+    
     public String tipo(){
         String res= "Mesa";
         for(int i=0;i<subtypes.length;i++){
