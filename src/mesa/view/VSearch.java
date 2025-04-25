@@ -5,20 +5,36 @@ import java.util.Scanner;
 import animal.domain.Mesa;
 
 public class VSearch {
-    private Scanner sc ;
-    private List<Mesa> animales;
-    public VSearch(Scanner sc, List<Mesa> la){
-        this.sc=sc;
-        animales = la;
+    private Scanner sc;
+    private List<Mesa> mesas;
+
+    public VSearch(Scanner sc, List<Mesa> mesas) {
+        this.sc = sc;
+        this.mesas = mesas;
     }
-    public void search(){
-        System.out.println("INTRODUCE NOMBRE: ");
+
+    public void VSearch() {
+        System.out.print("INTRODUCE EL NOMBRE DE LA MESA: ");
         String nombre = sc.next();
-        Mesa aTemp=new Mesa(nombre,0,0,"");
-        for (int i = 0; i < animales.size(); i++) {
-            if(animales.get(i).equals(aTemp)){
-                System.out.println("Encontrado en posición " +  i);
+
+        boolean encontrada = false;
+
+        for (int i = 0; i < mesas.size(); i++) {
+            Mesa m = mesas.get(i);
+            if (m.getNombre().equalsIgnoreCase(nombre)) {
+                System.out.println("Mesa encontrada en la posición " + i);
+                System.out.println("Nombre: " + m.getNombre());
+                System.out.println("Tipo: " + m.tipo());
+                System.out.println("Min Jugadores: " + m.getMinJugadores());
+                System.out.println("Max Jugadores: " + m.getMaxJugadores());
+                System.out.println("Estado: " + (m.isActiva() ? "Activa" : "Inactiva"));
+                encontrada = true;
+                break;
             }
+        }
+
+        if (!encontrada) {
+            System.out.println("No se encontró ninguna mesa con ese nombre.");
         }
     }
 }
