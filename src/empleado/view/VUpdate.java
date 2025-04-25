@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import empleado.domain.Croupier;
 import empleado.domain.Empleado;
-import empleado.domain.Temporal;
+import empleado.domain.Seguridad;
 
 public class VUpdate {
 	private Scanner sc ;
@@ -24,16 +24,18 @@ public class VUpdate {
 	        String nombre = sc.next();
 	        System.out.println("INTRODUCE SALARIO");
 	        float salario = sc.nextFloat();
-	        System.out.println("INTRODUCE TEMPORAL (1) O FIJO (otre tecla)");
+	        System.out.println("INTRODUCE CROUPIER (1) O LIMPIADOR (2) O SEGURIDAD (CUALQUIER OTRA TECLA)");
 	        int tipo = sc.nextInt();  
 	        Empleado empleado ;
 	        if(tipo == 1){
 	            System.out.println("Meses?");
 	            int meses = sc.nextInt();
-	            empleado = new Temporal(nombre, salario, meses);
-	        }else{
 	            empleado = new Croupier(nombre, salario);
-	        }
+	        }else if(tipo == 2){
+	            empleado = new Limpiador(nombre, salario, horas);
+	        }else{
+	            empleado = new Seguridad(nombre, salario, meses);
+		}
 			dataList.set(posicion,empleado);
 			System.out.println("dato actualizado");
 		}else {
