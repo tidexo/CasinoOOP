@@ -9,7 +9,7 @@ public class Poker extends Mesa {
         return tienePelo;
     }   
     public String toString(){
-        return "Poker, Tiene pelo: " + tienePelo + " " + super.toString();
+        return "Poker, modalidad: " + modalidad + " " + super.toString();
     }
     public String tipo(){
         return subtypes[0];
