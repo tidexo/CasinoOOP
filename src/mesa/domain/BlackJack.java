@@ -1,7 +1,7 @@
 package animal.domain;
 public class BlackJack extends Mesa {
     private int apuestaMinima;
-    public BlackJack(int minJugadores, int maxJugadores, boolean estadoMesa,){
+    public BlackJack(int minJugadores, int maxJugadores, boolean estadoMesa){
         super(minjugadores, maxJugadores, estadoMesa);
         
         this.apuestaMinima = apuestaMinima;
