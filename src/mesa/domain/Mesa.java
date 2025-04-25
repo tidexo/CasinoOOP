@@ -11,7 +11,7 @@ public class Mesa implements Serializable {
     public Mesa(int maxJugadores, int minJugadores, boolean estadoMesa) {
         this.maxJugadores = maxJugadores;
         this.minJugadores = minJugadores;
-        this.estadomesa = estadoMesa;
+        this.estadoMesa = estadoMesa;
         this.subtypes= new String[]{"BlackJack", "Poker"};
     }
     public int getmaxJugadores(){
