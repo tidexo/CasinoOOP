@@ -5,10 +5,10 @@ import java.util.Scanner;
 import empleado.domain.Empleado;
 import empleado.domain.Limpiador;
 
-public class VCreateParcial {
+public class VCreateLimpiador {
     private Scanner sc ;
     private List<Empleado> dataList;
-    public VCreateParcial(Scanner sc, List<Empleado> l){
+    public VCreateLimpiador(Scanner sc, List<Empleado> l){
         this.sc=sc;
         dataList = l;
     }
