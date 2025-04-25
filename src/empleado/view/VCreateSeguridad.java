@@ -3,12 +3,12 @@ import java.util.List;
 import java.util.Scanner;
 
 import empleado.domain.Empleado;
-import empleado.domain.Temporal;
+import empleado.domain.Seguridad;
 
-public class VCreateTemporal {
+public class VCreateSeguridad {
     private Scanner sc ;
     private List<Empleado> dataList;
-    public VCreateTemporal(Scanner sc, List<Empleado> l){
+    public VCreateSeguridad(Scanner sc, List<Empleado> l){
         this.sc=sc;
         dataList = l;
     }
