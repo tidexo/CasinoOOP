@@ -1,7 +1,7 @@
 package empleado.domain;
-public class Temporal extends Empleado {
+public class Seguridad extends Empleado {
     private int meses;
-    public Temporal(String nombre, float salario, int meses) {
+    public Seguridad(String nombre, float salario, int meses) {
 		super(nombre, salario);
 		this.meses=meses;
 	}
