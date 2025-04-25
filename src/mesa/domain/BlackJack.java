@@ -2,7 +2,7 @@ package mesa.domain;
 public class BlackJack extends Mesa {
     private int apuestaMinima;
     public BlackJack(int minJugadores, int maxJugadores, boolean estadoMesa){
-        super(minjugadores, maxJugadores, estadoMesa);
+        super(minJugadores, maxJugadores, estadoMesa);
         
         this.apuestaMinima = apuestaMinima;
     }
