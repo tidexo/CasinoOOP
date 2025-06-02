@@ -7,10 +7,10 @@ import empleado.domain.Seguridad;
 
 public class VCreateSeguridad {
     private Scanner sc ;
-    private List<Empleado> dataList;
-    public VCreateSeguridad(Scanner sc, List<Empleado> l){
-        this.sc=sc;
-        dataList = l;
+    private IRepo data;
+    public VCreateSeguridad(Scanner sc, IRepo data){
+        this.sc = sc;
+        this.data = data;
     }
     public void create(){
         System.out.println("INTRODUCE NOMBRE: ");
@@ -19,7 +19,7 @@ public class VCreateSeguridad {
         float salario = sc.nextFloat();
         System.out.println("Meses?");
         int meses = sc.nextInt();
-        Temporal empleado = new Temporal(nombre, salario, meses);
+        Seguridad empleado = new Seguridad(nombre, salario, meses);
         dataList.add(empleado);
     }
 }
