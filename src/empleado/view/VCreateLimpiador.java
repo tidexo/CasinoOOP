@@ -9,7 +9,7 @@ public class VCreateLimpiador {
     private Scanner sc ;
     private IRepo data;
     
-    public VCreateParcial(Scanner sc, IRepo data){
+    public VCreateLimpiador(Scanner sc, IRepo data){
         this.sc = sc;
         this.data = data;
     }
