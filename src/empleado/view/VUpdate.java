@@ -27,19 +27,19 @@ public class VUpdate {
             String nombre = sc.next();
             System.out.println("INTRODUCE SALARIO");
             float salario = sc.nextFloat();
-            System.out.println("INTRODUCE Croupier (1) O Limpiador (2) o seguridad (otra tecla)");
+            System.out.println("INTRODUCE Seguridad (1) O Croupier (2) o Limpiador (otra tecla)");
             int tipo = sc.nextInt();  
             Empleado empleado;
             if(tipo == 1){
                 System.out.println("Meses?");
                 int meses = sc.nextInt();
-                empleado = new Croupier(nombre, salario, meses);
+                empleado = new Seguridad(nombre, salario, meses);
             }else if (tipo ==2){
-                empleado = new Limpiador(nombre, salario);
+                empleado = new Croupier(nombre, salario);
             }else{
 		    System.out.println("Horas?");
                     int horas = sc.nextInt();
-		    empleado = new Seguridad(nombre, salario, horas);}
+		    empleado = new Limpiador(nombre, salario, horas);}
             data.update(posicion, empleado);
             System.out.println("dato actualizado");
         }else{
