@@ -1,9 +1,9 @@
-package animal.view;
+package empleado.view;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import animal.domain.Mesa;
+import mesa.domain.Mesa;
 import common.FileUtil;
 
 public class VPrincipal {
