@@ -20,6 +20,6 @@ public class VCreateCroupier {
         System.out.println("INTRODUCE SALARIO");
         float salario = sc.nextFloat();
         Croupier empleado = new Croupier(nombre, salario);
-        dataList.add(empleado);
+        data.create(empleado);
     }
 }
