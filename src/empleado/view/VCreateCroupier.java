@@ -7,11 +7,13 @@ import empleado.domain.Croupier;
 
 public class VCreateCroupier {
     private Scanner sc ;
-    private List<Empleado> dataList;
-    public VCreateCroupier(Scanner sc, List<Empleado> l){
-        this.sc=sc;
-        dataList = l;
+    private IRepo data;
+    
+    public VCreateFijo(Scanner sc, IRepo data){
+        this.sc = sc;
+        this.data = data;
     }
+    
     public void create(){
         System.out.println("INTRODUCE NOMBRE: ");
         String nombre = sc.next();
