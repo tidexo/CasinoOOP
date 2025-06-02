@@ -1,9 +1,8 @@
-package empleado.view;
-import java.util.List;
-import java.util.Scanner;
+package CasinoOOP.src.empleado.view;
 
-import empleado.domain.Empleado;
-import empleado.domain.Seguridad;
+import java.util.Scanner;
+import CasinoOOP.src.empleado.domain.Fijo;
+import CasinoOOP.src.common.domain.repo.IRepo;
 
 public class VCreateSeguridad {
     private Scanner sc ;
