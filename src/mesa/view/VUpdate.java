@@ -1,10 +1,10 @@
-package animal.view;
+package empleado.view;
 import java.util.List;
 import java.util.Scanner;
 
-import animal.domain.BlackJack;
-import animal.domain.Mesa;
-import animal.domain.Poker;
+import blackjack.domain.BlackJack;
+import mesa.domain.Mesa;
+import poker.domain.Poker;
 
 public class VUpdate {
     private Scanner sc;
