@@ -1,8 +1,8 @@
-package animal.view;
+package empleado.view;
 import java.util.List;
 import java.util.Scanner;
 
-import animal.domain.Mesa;
+import mesa.domain.Mesa;
 
 public class VSearch {
     private Scanner sc;
