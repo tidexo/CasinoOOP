@@ -1,19 +1,19 @@
-package empleado.view;
-import java.util.List;
 import java.util.Scanner;
-
-import empleado.domain.Empleado;
+import CasinoOOP.src.common.domain.repo.IRepo;
 
 public class VRead {
-    private Scanner sc ;
-    private List<Empleado> dataList;
-    public VRead(Scanner sc, List<Empleado> la){
-        this.sc=sc;
-        dataList = la;
+    private Scanner sc;
+    private IRepo data;
+    
+    public VRead(Scanner sc, IRepo data){
+        this.sc = sc;
+        this.data = data;
     }
+    
     public void read(){
-        for(int i = 0; i< dataList.size();i++){
-            System.out.println(i + "\t" + dataList.get(i));
+        var empleados = data.getAll();
+        for(int i = 0; i < empleados.size(); i++){
+            System.out.println(i + "\t" + empleados.get(i));
         }
     }
 }
