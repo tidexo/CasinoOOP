@@ -1,28 +1,32 @@
-package empleado.view;
-import java.util.List;
-import java.util.Scanner;
+package CasinoOOP.src.empleado.view;
 
-import empleado.domain.Empleado;
+import java.util.Scanner;
+import CasinoOOP.src.empleado.domain.Empleado;
+import CasinoOOP.src.empleado.domain.Fijo;
+import CasinoOOP.src.empleado.domain.Temporal;
+import CasinoOOP.src.common.domain.repo.IRepo;
 
 public class VCreate {
-    private Scanner sc ;
-    private List<Empleado> dataList;
-    public VCreate(Scanner sc, List<Empleado> l){
-        this.sc=sc;
-        dataList = l;
+    private Scanner sc;
+    private IRepo data;
+    
+    public VCreate(Scanner sc, IRepo data){
+        this.sc = sc;
+        this.data = data;
     }
+    
     public void create(){
-        System.out.println("Tipo de empleado: Croupier (1), Limpiador (2), Seguridad (otra tecla)");
+        System.out.println("Tipo de empleado: Fijo (1), Limpiador (2), Temporal (otra tecla)");
         int tipo = sc.nextInt();  
         if(tipo == 1){
-            VCreateCroupier vc=new VCreateCroupier(sc, dataList);
+            VCreateFijo vc = new VCreateFijo(sc, data);
             vc.create();
-        }else if(tipo == 2) {
-        	VCreateParcial vc=new VCreateParcial(sc, dataList);
-        	vc.create();
+        }else if(tipo == 2){
+            VCreateParcial vc = new VCreateParcial(sc, data);
+            vc.create();
         }else{
-        	VCreateSeguridad vc=new VCreateSeguridad(sc, dataList);
-        	vc.create();
+            VCreateTemporal vc = new VCreateTemporal(sc, data);
+            vc.create();
         } 
     }
 }
