@@ -1,8 +1,8 @@
-package animal.view;
+package empleado.view;
 import java.util.List;
 import java.util.Scanner;
 
-import animal.domain.Mesa;
+import empleado.domain.Empleado;
 
 public class VDelete {
     private Scanner sc;
