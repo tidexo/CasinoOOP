@@ -37,7 +37,9 @@ public class VUpdate {
             }else if (tipo ==2){
                 empleado = new Limpiador(nombre, salario);
             }else{
-		    empleado = new Seguridad(nombre, salario);}
+		    System.out.println("Horas?");
+                    int horas = sc.nextInt();
+		    empleado = new Seguridad(nombre, salario, horas);}
             data.update(posicion, empleado);
             System.out.println("dato actualizado");
         }else{
