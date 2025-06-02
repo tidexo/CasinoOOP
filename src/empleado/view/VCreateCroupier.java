@@ -9,7 +9,7 @@ public class VCreateCroupier {
     private Scanner sc ;
     private IRepo data;
     
-    public VCreateFijo(Scanner sc, IRepo data){
+    public VCreateCroupier(Scanner sc, IRepo data){
         this.sc = sc;
         this.data = data;
     }
