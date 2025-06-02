@@ -7,10 +7,11 @@ import empleado.domain.Limpiador;
 
 public class VCreateLimpiador {
     private Scanner sc ;
-    private List<Empleado> dataList;
-    public VCreateLimpiador(Scanner sc, List<Empleado> l){
-        this.sc=sc;
-        dataList = l;
+    private IRepo data;
+    
+    public VCreateParcial(Scanner sc, IRepo data){
+        this.sc = sc;
+        this.data = data;
     }
     public void create(){
         System.out.println("INTRODUCE NOMBRE: ");
@@ -20,6 +21,6 @@ public class VCreateLimpiador {
         System.out.println("Horas?");
         int horas = sc.nextInt();
         Limpiador empleado = new Limpiador(nombre, salario, horas);
-        dataList.add(empleado);
+        data.create(empleado);
     }
 }
