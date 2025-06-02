@@ -19,13 +19,13 @@ public class VCreate {
         System.out.println("Tipo de empleado: Fijo (1), Limpiador (2), Temporal (otra tecla)");
         int tipo = sc.nextInt();  
         if(tipo == 1){
-            VCreateFijo vc = new VCreateFijo(sc, data);
+            VCreateFijo vc = new VCreateCroupier(sc, data);
             vc.create();
         }else if(tipo == 2){
-            VCreateParcial vc = new VCreateParcial(sc, data);
+            VCreateParcial vc = new VCreateLimpiador(sc, data);
             vc.create();
         }else{
-            VCreateTemporal vc = new VCreateTemporal(sc, data);
+            VCreateTemporal vc = new VCreateSeguridad(sc, data);
             vc.create();
         } 
     }
